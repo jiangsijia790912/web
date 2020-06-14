@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+	padding: 0;
+	margin:0;
+	}
+	a{
+		text-decoration: none;
+	}
+	ul{
+		list-style-type: none;
+	}
+	.clear:after{
+	content:'';
+	display: block;
+	height:0;
+	clear:both;
+}
+	.back{
+		background-image: url(../img/背景.png)
+	}
+	.header{
+		height: 100px;
+	}
+	.container{
+		width: 1180px;
+		margin:0 auto;
+	}
+	.logo{
+		margin-top: 33px;
+		float: left;
+	}
+	.nav{
+		float: left;
+		margin-top: 42px;
+	}
+	.nav li{
+		float: left;
+		margin-left: 70px;
+		font-size:18px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+		text-align: center;
+	}
+	.nav li:hover{
+		width: 54px;
+		border-bottom: 2px solid rgba(0,163,255,1);
+	}
+	.nav a{
+		color:rgba(5,5,5,1);
+	}
+	.right{
+		float: right;
+		width:60px;
+		height:12px;
+		font-size:14px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+		color:rgba(101,101,101,1);
+		margin-top: 44px;
+		margin-left: 42px;
+	}
+	.form{
+		float: right;
+		margin-top: 31px;
+	}
+	.search{
+		float: left;
+		width: 360px;
+		padding: 12px 19px;
+		border:1px solid rgba(0,163,255,1);
+	}
+	.submit{
+		float: left;
+		width:50px;
+		height:42px;
+		background:rgba(0,163,255,1) url(../img/search.png) no-repeat center center;
+		border: 1px solid rgba(0,163,255,1);
+	}
+	.img{
+		width:100%;
+		height:420px;
+		background:rgba(27,3,107,1);
+	}
+	.list{
+		background:url(../img/banner2.png) no-repeat center;
+	 	height: 420px;
+	}
+	.frame{
+		width:190px;
+		height:420px;
+		background:rgba(0,0,0,1);
+		opacity:0.3;
+		margin-left: 150px;
+	}
+	.frame ul{
+		margin-left: 20px;
+		padding-top: 7px;
+	}
+	.word a{
+		font-size:14px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+	    color:rgb(255,255,255);
+	    line-height:44px;
+	}
+	.word span{
+		display: inline-block;
+		padding-left:85px; 
+		color:white;
+	}
+	.word .first{
+		padding-left:44px;
+	}
+	.word .second{
+		padding-left:58px; 
+	}
+	.word .third{
+		padding-left:98px; 
+	}
+	.word .forth{
+		padding-left:113px; 
+	}
+	.word a:hover,span:hover{
+		color:rgba(0,180,255,1);
+	}
+	.title1{
+		width: 1200px;
+		margin:0 auto;	
+		margin-top: 8px;
+		height:39px;
+		background:rgba(255,255,255,1);
+		box-shadow:0px 2px 2px 0px rgba(118,118,118,0.2);
+		padding-top: 21px;
+		font-size: 	16px;
+	}
+
+	.title2 li{
+		float: left;
+		width: 	123px;
+		text-align: center;
+		border-right: 0.5px solid rgba(190,190,190,1);
+	}
+	.title2 .last{
+		border: none;
+	}
+	.title2 a{
+		color: 	black;
+	}
+	.title2 a:hover{
+		color:rgba(0,180,255,1);
+	}
+	.right2{
+		float: right;
+	}
+	.right2 a{
+		color:rgba(0,180,255,1);
+	}
+	.left{
+		width: 1200px;
+		margin:0 auto;
+		height:80px;
+		margin-top: 	40px;
+	}
+	.left .left2{
+		float: 	left;
+		font-size:20px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+		color:rgba(72,72,72,1);	
+	}
+	.left .right3{
+		float: 	right;	
+		font-size:12px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+		color:rgba(165,165,165,1);
+	}
+	.image{
+		width: 1215px;
+		height: 	555px;
+		margin:0 auto;
+	}
+	.image div{
+		width:228px;
+		height:270px;
+		background:rgba(255,255,255,1);
+		box-shadow:0px 1px 1px 0px rgba(118,118,118,0.5);
+	}
+	.a a{
+		font-size:14px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+		color:rgba(5,5,5,1);
+		margin: 12px 12px;
+	}
+	.a p{
+		margin: 9px 12px;
+	}
+	.large{
+		color: orange;
+	}
+	.a{
+		display: inline-block;
+		float: left;
+		margin-right: 15px;
+		margin-bottom: 15px;
+	}
+	.front{
+		width:1200px;
+		margin-top:25px;
+		height: 80px;
+		margin:0 auto;
+	}
+	.front span{
+		float: left;
+		font-size:20px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+		color:rgba(72,72,72,1);
+	}
+	.center{
+		margin-left:430px;
+	}
+	.grade li{
+		float: left;
+		padding-right: 65px;
+	}
+	.grade a{
+		font-size:16px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+		color:rgba(165,165,165,1);
+	}
+	.grade a:hover{
+		color:rgba(0,163,255,1);
+	}
+	.front a{
+		float: right;
+		color:rgba(165,165,165,1);
+	}
+	.image2{
+		width: 1215px;
+		height: 270px;
+		margin:0 auto;
+	}
+	.image2 div{
+		width:228px;
+		height:270px;
+		background:rgba(255,255,255,1);
+		box-shadow:0px 1px 1px 0px rgba(118,118,118,0.5);
+	}
+	.great{
+		width: 1200px;
+		margin: auto;
+		height:0 88px;
+		font-size:20px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+		color:rgba(72,72,72,1);
+	}
+	.greatall{
+		width: 1245px;
+		height: 320px;
+		margin:0 auto;
+	}
+	.great1{
+		float: left;
+		height: 320px;
+		overflow: hidden;
+		margin-right: 15px;
+	}
+	.great1 .g{
+		position: absolute;
+		bottom:87px;
+	}
+	.great1 .h{
+		position: absolute;
+		bottom:25px;
+	}
+	.great1 .e{
+		position: absolute;
+		bottom:97px;
+	}
+	.great1 .f{
+		position: absolute;
+		bottom:35px;
+	}
+	.great1 div{
+		position: relative;
+	}
+	.great1 p{
+		width: 100%;
+		background:rgba(0,0,0,1);
+		opacity:0.5;
+		color: white;
+	}
+	.b .i{
+		position: absolute;
+		bottom:200px;
+		font-size:30px;
+		font-family:Microsoft YaHei;
+		font-weight:bold;
+		color:rgba(249,224,3,1);
+		margin-left: 20px;
+	}
+	.b .m{
+		position: absolute;
+		bottom:170px;
+		font-size:27px;
+		font-family:Microsoft YaHei;
+		font-weight:bold;
+		color: white;
+		margin-left: 20px;
+	}
+	.b .j{
+		position: absolute;
+		bottom: 120px;
+		font-size:12px;
+		font-family:Microsoft YaHei;
+		font-weight:400;
+		color:rgba(249,224,3,1);
+		border: 1px solid rgba(249,224,3,1);
+		padding:6px 17px;
+		margin-left: 20px;
+	}
+	.b div{
+		position: relative;
+	}
+	.bottom{
+		margin-top: 70px;
+		width: 100%;
+		height: 417px;
+		background:rgba(255,255,255,1);
+	}
+	.bottom1{
+		display: inline-block;
+		float: left;
+		margin-left: 150px;
+		margin-top: 124px;
+	}
+	.bottom1 p{
+		height: 80px;
+		line-height: 80px;
+	}
+	.bottom1 a{
+		color: 	rgba(0,163,255,1);
+		display: 	inline-block;
+		border: 1px solid rgba(0,163,255,1);
+		padding: 	10px 20px;			
+	}
+	.bottom2{
+		display: inline-block;
+		float: left;
+		margin-left: 120px;
+		margin-top: 124px;
+	}
+	.bottom3{
+		display: inline-block;
+		float: left;
+		margin-left: 120px;
+		margin-top: 124px;
+	}
+	.bottom4{
+		display: inline-block;
+		float: left;
+		margin-left: 120px;
+		margin-top: 124px;
+	}
+	</style>
+</head>
+<body>
+	<div class="back">
+		<div class="header">
+			<div class="container clear">
+				<img src="img/雪梨在线.png" alt="这是一张图片" class="logo"/>
+				<ul class="nav clear">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">课程</a></li>
+					<li><a href="#">职业规划</a></li>
+				</ul>
+				<span class="right">个人中心</span>
+				<form class="form">
+					<input type="text" placeholder="请输入关键词" class="search"/>
+					<input type="button" class="submit"  />
+				</form>
+			</div>
+		</div>
+		<div class="img">
+			<div class="list">
+				<div class="frame">
+				<ul class="word">
+					<li><a href="#">前端开发</a><span>></span></li>
+					<li><a href="#">后端开发</a><span>></span></li>
+					<li><a href="#">移动开发</a><span>></span></li>
+					<li><a href="#">人工智能</a><span>></span></li>
+					<li><a href="#">商业预测</a><span>></span></li>
+					<li><a href="#">云计算&大数据</a><span class="first">></span></li>
+					<li><a href="#">运维&从测试</a><span class="second">></span></li>
+					<li><a href="#">UI设计</a><span class="third">></span></li>
+					<li><a href="#">产品</a><span class="forth">></span>></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+		<div class="title">	
+			<div class="title1">	
+				<ul class="title2">
+					<li><a href="#">精品推荐</a></li>
+					<li><a href="#">JQuery</a></li>
+					<li><a href="#">Spark</a></li>
+					<li><a href="#">MySQL</a></li>
+					<li><a href="#">JavaWeb</a></li>
+					<li><a href="#">MySQL</a></li>
+					<li class="	last"><a href="#">JavaWeb</a></li>
+				</ul>
+				<span class="right2"><a href="#">修改兴趣</a></span>
+			</div>
+		</div>
+		<div class="left">
+			<span class="left2">精品推荐</span>
+			<span class="right3">查看全部</span>
+		</div>
+		<div class="image">	
+			<div class="a">
+				<img src="img/图层 133.png" alt="这是一张图片">
+				<a href="#">Think&nbspPHP&nbsp博客系统实战项目演练</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 135.png" alt="这是一张图片">
+				<a href="#">Android网络图片加载框架详解</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 136.png" alt="这是一张图片">
+				<a href="#">Angular&nbsp2&nbsp最新框架+主流技术+项目实战</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 137.png" alt="这是一张图片">
+				<a href="#">Android&nbspHybrid&nbspAPP开发实战&nbspH5+原生</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 137.png" alt="这是一张图片">
+				<a href="#">Android&nbspHybrid&nbspAPP开发实战&nbspH5+原生</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 133.png" alt="这是一张图片">
+				<a href="#">Think&nbspPHP&nbsp博客系统实战项目演练</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 135.png" alt="这是一张图片">
+				<a href="#">Android网络图片加载框架详解</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 136.png" alt="这是一张图片">
+				<a href="#">Angular&nbsp2&nbsp最新框架+主流技术+项目实战</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 137.png" alt="这是一张图片">
+				<a href="#">Android&nbspHybrid&nbspAPP开发实战&nbspH5+原生</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 137.png" alt="这是一张图片">
+				<a href="#">Android&nbspHybrid&nbspAPP开发实战&nbspH5+原生</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+		</div>
+		<div class="front">
+			<span>前端开发工程师</span>
+			<div class="center">
+				<ul class="grade">
+					<li><a href="#">热门</a></li>
+					<li><a href="#">初级</a></li>
+					<li><a href="#">中级</a></li>
+					<li><a href="#">高级</a></li>
+				</ul>
+			</div>
+			<a href="#">查看全部</a>
+		</div>
+		<div class="image2">	
+			<div class="a">
+				<img src="img/图层 142.png" alt="这是一张图片">
+				<a href="#">微软人工智能-数据分析平台</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 144.png" alt="这是一张图片">
+				<a href="#">Unity&nbspProfiler入门</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 143.png" alt="这是一张图片">
+				<a href="#">Cocos2d-x&nbsp&nbsp引擎源码中的纹理优化</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 146.png" alt="这是一张图片">
+				<a href="#">Kami2首页界面切换效果</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+			<div class="a">
+				<img src="img/图层 145.png" alt="这是一张图片">
+				<a href="#">Android&nbspHybrid&nbspAPP开发实战&nbspH5+原生</a>
+				<p>
+					<span class="large">高级</span>
+					<span>•</span>
+					<span>1125人在学习</span>
+				</p>
+			</div>
+		</div>
+		<div class="great">牛人推荐</div>
+		<div class="greatall">
+			<div class="great1 b">
+				<img src="img/图层 149.png" alt="这是一张图片">
+				<div>
+					<span class="i">毕业季</span>
+					<span class="m">带你华丽转身</span>
+					<span class="j">点击查看</span>
+				</div>
+			</div>
+			<div class="great1 c">
+				<img src="img/20172124182104355.png" alt="这是一张图片">
+				<div class="d">
+					<p class="g">
+						<span class="l">闻老师</span>
+						<span>大数据</span>
+					</p>
+					<p class="h">高级互联网软件工程师，曾担任某物流公司CRM开发团队TL.多年JAVAEE,大数据领域研发……</p>
+				</div>
+			</div>
+			<div class="great1 c">
+				<img src="img/20154025104058710.png" alt="这是一张图片">
+				<div>
+					<p class="e">
+						<span class="l">汪老师</span>
+						<span>前端</span>
+					</p>
+					<p class="f">高级软件架构师，全栈开发，多年大型项目管理经验。对Web Components,Node.js</p>
+				</div>
+			</div>
+			<div class="great1 c">
+				<img src="img/20154325104317144 (1).png" alt="这是一张图片">
+				<div>
+					<p class="e">
+						<span class="l">江老师</span>
+						<span>前端</span>
+					</p>
+					<p class="f">多年软件开发经验和教学经验，精通html，css，js，asp.net等编程语言和数据库系统</p>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="bottom1">
+				<img src="img/雪梨在线(1).png" alt="这是一张图片">
+				<p>致力于普及中国最好的教育，与中国一流大学和机构合作提供在线课程。</p>
+				<a href="#">下载APP</a>
+			</div>
+			<div class="bottom2">
+				<ul>
+					<li>关于雪梨网</li>
+					<li><a href="#">关于</a></li>
+					<li><a href="#">管理团队</a></li>
+					<li><a href="#">工作机会</a></li>
+					<li><a href="#">客户服务</a></li>
+					<li><a href="#">帮助</a></li>
+				</ul>
+			</div>
+			<div class="bottom3">
+				<ul>
+					<li>新手指南</li>
+					<li><a href="#">如何注册</a></li>
+					<li><a href="#">如何选课</a></li>
+					<li><a href="#">如何拿到毕业证</a></li>
+					<li><a href="#">学分是什么</a></li>
+					<li><a href="#">考试未通过怎么办</a></li>
+				</ul>
+			</div>
+			<div class="bottom4">
+				<ul>
+					<li>合作伙伴</li>
+					<li><a href="#">合作机构</a></li>
+					<li><a href="#">合作导师</a></li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+
+</body>
+</html>
+ 
